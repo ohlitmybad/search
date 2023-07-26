@@ -320,9 +320,27 @@ color: red;
 
 </style>
 
+	<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({article:'auto'});
+  !function (e, f, u, i) {
+    if (!document.getElementById(i)){
+      e.async = 1;
+      e.src = u;
+      e.id = i;
+      f.parentNode.insertBefore(e, f);
+    }
+  }(document.createElement('script'),
+  document.getElementsByTagName('script')[0],
+  '//cdn.taboola.com/libtrc/datamb-pub-pub/loader.js',
+  'tb_loader_script');
+  if(window.performance && typeof window.performance.mark == 'function')
+    {window.performance.mark('tbl_ic');}
+</script>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7677714701428206"
      crossorigin="anonymous"></script>
+	
 	
 </head>
 
@@ -432,7 +450,21 @@ const _0x3c4cbf=_0x4917;(function(_0x4ea59b,_0xce5f5){const _0x153df3=_0x4917,_0
 <div class="dark-mode-toggle" onclick="toggleDarkMode()">
     <span class="toggle-icon"></span>
   </div>
+<div id="taboola-below-article-thumbnails"></div>
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({
+    mode: 'alternating-thumbnails-a',
+    container: 'taboola-below-article-thumbnails',
+    placement: 'Below Article Thumbnails',
+    target_type: 'mix'
+  });
+</script>	
 
+	<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({flush: true});
+</script>
 
 </body>
 </html>
