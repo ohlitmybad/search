@@ -174,11 +174,6 @@ body.dark-mode .dark-mode-toggle .toggle-icon::before {
 </header>
 	
 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7677714701428206"
-     crossorigin="anonymous"></script>
-	
-</head>
 <script>
     // Function to scroll down a tiny bit
     function scrollDown() {
@@ -191,11 +186,24 @@ body.dark-mode .dark-mode-toggle .toggle-icon::before {
     }
 
     // Combine both actions with a small timer between them
-    window.onload = function() {
-        scrollDown();
-        setTimeout(scrollUp, 1); // Adjust the delay time (1000ms = 1 second)
-    };
+    function initializeScroll() {
+        // Check if the screen width is below the threshold for mobile devices (e.g., 768 pixels)
+        if (window.innerWidth < 768) {
+            scrollDown();
+            setTimeout(scrollUp, 10); // Adjust the delay time (1000ms = 1 second)
+        }
+    }
+
+    // Add an event listener to execute the scrolling functions when the page loads
+    window.addEventListener('load', initializeScroll);
 </script>
+	
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7677714701428206"
+     crossorigin="anonymous"></script>
+	
+</head>
+	
 	
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PSBMXX80EF"></script>
 <script>
